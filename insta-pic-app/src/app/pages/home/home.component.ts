@@ -25,6 +25,7 @@ export class HomeComponent implements OnInit{
     this.gallery = this.galleryService.getByUser(this.username);
   }
 
+  
   onDeleteImage(id:string){
     Swal.fire({
       text: "¿Está seguro de eliminar la imagen seleccionada?",
@@ -37,7 +38,17 @@ export class HomeComponent implements OnInit{
       cancelButtonText:"No"
     }).then((result) => {
       if (result.isConfirmed) {
-        this.galleryService.deleteById(id);
+       
+        this.galleryService.deleteById(id).subscribe({
+          next: () => {
+            this.gallery.update(items => items.filter(item => item.id !== id));
+            Swal.fire('Eliminada!', 'La imagen ha sido eliminada.', 'success');
+          },
+          error: (err) => {
+            console.error('Error al eliminar la imagen:', err);
+            Swal.fire('Error', 'No se pudo eliminar la imagen.', 'error');
+          }
+        });
       }
     });
   }
