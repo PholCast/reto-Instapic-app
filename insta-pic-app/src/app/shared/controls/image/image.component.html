@@ -1,0 +1,10 @@
+<div class="image-container">
+  <img [src]="galleryItem.url" class="image" />
+  <div class="comments">
+    <input type="text" (change)="onAddComment($event, galleryItem.id)" class="comment-input"/>
+    <div class="icons">
+      <a (click)="onComment(galleryItem.comments)" class="icon"><i class="fas fa-comments"></i></a>
+      <a (click)="onDelete(galleryItem.id)" class="icon"><i class="fas fa-trash-alt"></i></a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,31 @@
+<section id="profile">
+  <div>
+    <img src="../assets/batman_avatar.webp" />
+    <span id="username">{{ username }}</span>
+  </div>
+  <div>
+    <span>10</span>
+    <span>Publicaciones</span>
+  </div>
+  <div>
+    <span>5</span>
+    <span>Seguidores</span>
+  </div>
+  <div>
+    <span>250</span>
+    <span>Solicitudes</span>
+  </div>
+</section>
+<section id="gallery">
+  @for (item of gallery(); track item) {
+    <app-image
+      [image]="item"
+      (delete)="onDeleteImage($event)"
+      (comments)="onComments($event)"
+      (addComment)="onAddComment($event, item.id)"
+    />
+  } @empty {
+    <span>Aún no tienes imágenes</span>
+  }
+
+</section>

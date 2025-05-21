@@ -1,0 +1,166 @@
+body{
+    font-family: 'Ubuntu', 'Courier New', Courier, monospace;
+    color:#023047;
+    background-color: #f1f1f1;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #219ebc;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+main{
+    flex:1;
+    padding: 10px 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#login-box{
+    background-color: #FFF;
+    padding: 20px 40px;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow:0 0 10px rgba(0, 0,0, 0.1);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#login-box h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+input[type="text"], input[type="password"]{
+    background-color: #FFF;
+    border: 2px solid #219ebc;
+    color: #023047;
+    padding:10px;
+    font-size: 16px;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+input[type="text"]:focus,  input[type="password"]:focus{
+    border-color: #fb8500;
+    outline: none;
+}
+
+#login-box a{
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    color: white;
+    display: block;
+    text-align: center;
+}
+
+
+a.primary {
+    background-color: #ffb703;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+  
+a.primary:hover {
+    background-color: #d00000;
+}
+  
+a.secondary {
+    background-color: #fb8500;
+    cursor: pointer;
+}
+  
+a.secondary:hover {
+    background-color: #d00000;
+}
+
+header > ul{
+    display: flex;
+}
+
+header > ul li{
+    list-style: none;
+    margin: auto;
+}
+
+header > ul li a{
+    text-decoration: none;
+    cursor: pointer;
+    color:#FFF;
+    font-weight: bolder;
+    font-size: 18px;
+}
+
+
+
+footer{
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+    background-color: #023047;
+    color: #FFF;
+}
+
+footer i{
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 30px;
+}
+
+#profile{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 80%;
+}
+
+#profile img{
+    width: 100px;
+    display: block;
+    border-radius: 50px;
+}
+
+#profile div{
+    text-align: center;
+}
+
+#profile div span{
+    display: block;
+}
+
+#profile div span:first-child{
+    font-size: 1.8em;
+    font-weight: 900;
+}
+
+#gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+#gallery img{
+    width: 300px;
+    margin: 20px;
+    padding: 5px;
+    border: 1px solid #fff;
+}
+
+#gallery img:hover{
+    border-color:#fb8500;
+    opacity: 0.7;
+}

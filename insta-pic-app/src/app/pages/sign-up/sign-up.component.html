@@ -1,0 +1,27 @@
+<section id="login-box">
+  <h2>Registro de usuario</h2>
+  <form [formGroup]="signUpForm">
+    <label>Nombre de usuario</label>
+    <input type="text" id="username" formControlName="username" />
+    <label>Nombre</label>
+    <input type="text" id="name" formControlName="name" />
+    <label>Email</label>
+    <input type="text" id="email" formControlName="email" />
+    <label>Contraseña</label>
+    <input
+      type="password"
+      id="password"
+      placeholder="Ingrese contraseña"
+      formControlName="password"
+    />
+    <label>Repita contraseña</label>
+    <input
+      type="password"
+      id="retype-password"
+      placeholder="Ingrese contraseña"
+      formControlName="rePassword"
+    />
+  </form>
+  <a (click)="onRegistry()" class="primary">Crear</a>
+  <a [routerLink]="['']" class="secondary">Regresar</a>
+</section>

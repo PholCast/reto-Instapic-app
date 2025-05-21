@@ -1,0 +1,13 @@
+<header>
+  @if(isLoggedUser()){
+    <ul>
+      <li><a [routerLink]="['/home']">Inicio</a></li>
+      <li><a [routerLink]="['/profile']">Mi perfil</a></li>
+      <li><a [routerLink]="['/find']">Buscar usuarios</a></li>
+      <li><a [routerLink]="['/upload']">Subir fotos</a></li>
+      <li><a (click)="onLogout()">Cerrar sesión</a></li>
+    </ul>
+  }@else {
+    <h1>InstaPic</h1>
+  }
+</header>

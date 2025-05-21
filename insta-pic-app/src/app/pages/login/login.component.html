@@ -1,0 +1,11 @@
+<section id="login-box">
+  <h2>Inicio de sesión</h2>
+  <form [formGroup]="loginForm">
+    <label>Nombre de usuario</label>
+    <input type="text" id="username" formControlName="username"/>
+    <label>Contraseña</label>
+    <input type="password" id="password" placeholder="Ingrese contraseña" formControlName="password"/>
+  </form>
+  <a (click)="onLogin()" class="primary">Iniciar sesión</a>
+  <a [routerLink]="['sign-up']" class="secondary">Registrarse</a>
+</section>
